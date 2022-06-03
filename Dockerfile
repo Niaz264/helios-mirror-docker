@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
@@ -13,9 +13,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
         libsqlite3-dev libfreeimage-dev swig libboost-all-dev \
         libpthread-stubs0-dev zlib1g-dev
         
-# Installing Megasdkrest
-RUN curl -fsSL https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest \
-&& chmod +x /usr/local/bin/megasdkrest
+
 
 # Installing Mega SDK Python Binding
 ENV MEGA_SDK_VERSION="3.8.1"
